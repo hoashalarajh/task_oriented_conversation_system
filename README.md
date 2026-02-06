@@ -64,20 +64,59 @@ pip install -r requirements.txt
 ---
 
 ## Usage
-1. Import and initialize the system:
-```python
-from conversation_system import ConversationSystem
+The dialogue system is instantiated from the `hstn` class and configured by assigning lecture-related text inputs to predefined attributes. Once configured, the system is executed using the `run_system_A()` method.
 
-system = ConversationSystem()
-model, contents = system.define_model()
-```
+### Here is the example:
 
-2. Start the conversation and provide user feedback:
 ``` python
-response = system.run_conversation(user_input="I found the lecture informative.")
-print(response)
+from hstn import hstn
+
+# Create an instance of the dialogue system
+dialogue_system = hstn()
+
+# Assign lecture-related inputs
+dialogue_system.about_lecture = text1
+dialogue_system.task_organization = text2
+dialogue_system.student_interaction = text3
+dialogue_system.clarity = text4
+
+# Run the dialogue system
+dialogue_system.run_system_A()
 ```
+
+
+### Input Description
+
+The following attributes must be set before running the system:
+
+- `about_lecture`
+General feedback or description of the lecture content.
+
+- `task_organization`
+Feedback related to how tasks or topics were structured.
+
+- `student_interaction`
+Observations about student engagement and interaction.
+
+- `clarity`
+Feedback regarding clarity of explanations and delivery.
+
+Each attribute expects a text string.
+
+### Execution Flow
+
+1. An instance of the `hstn` class is created.
+
+2. User-provided text inputs are assigned to the corresponding dialogue attributes.
+
+3. Calling `run_system_A()` triggers the hierarchical state transition–based dialogue process.
+
+4. The system processes the inputs and conducts the task-oriented conversation accordingly.
+
 ---
+
+
+
 ## Configuration
 The system requires a valid API key for model access. By default, on Kaggle, it uses `UserSecretsClient()`. For local use, replace it with an environment variable:
 
