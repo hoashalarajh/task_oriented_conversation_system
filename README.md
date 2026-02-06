@@ -6,3 +6,14 @@ The working principle of this software is demonstrated by the Hierarchical State
 
 Note to practitioners - The whole system was tested on kaggle platform. So if you want to run the system on your local machine please do the change at the following place:
 
+Overview
+
+The system models task-oriented conversations for lecture feedback collection. It is designed to:
+
+Adaptively handle short-term and extended interactions.
+
+Follow a hierarchical state transition structure for decision-making.
+
+Ensure a user-centered feedback process.
+
+The core principle is demonstrated in the Hierarchical State Transition Diagram above.
