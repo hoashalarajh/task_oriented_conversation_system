@@ -47,12 +47,28 @@ The core principle is demonstrated in the Hierarchical State Transition Diagram 
 git clone https://github.com/<your-username>/Task_oriented_conversation_system.git
 cd Task_oriented_conversation_system
 ```
-3. Create and activate a Python virtual environment:
-4. Install dependencies:
 
+2. Create and activate a Python virtual environment:
+```bash
+python -m venv venv
+source venv/bin/activate    # Linux/macOS
+venv\Scripts\activate       # Windows
+```
+
+3. Install dependencies:
+```bash
+pip install -r requirements.txt
+```
 ---
 
 ## Usage
+1. Import and initialize the system:
+```python
+from conversation_system import ConversationSystem
+
+system = ConversationSystem()
+model, contents = system.define_model()
+```
 
 
 
