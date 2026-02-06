@@ -42,7 +42,21 @@ The core principle is demonstrated in the Hierarchical State Transition Diagram 
 
 ## Installation
 
-1. Clone the repository:  
-```bash
+1. Clone the repository:```bash
 git clone https://github.com/<your-username>/Task_oriented_conversation_system.git
 cd Task_oriented_conversation_system
+2. Create and activate a Python virtual environment:
+3. Install dependencies:
+
+---
+
+## Usage
+
+
+
+
+
+
+
+
+
