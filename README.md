@@ -164,26 +164,6 @@ git commit -m "Add feature"
 
 This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
 
-```yaml
-
----
-
-This version of `README.md` now includes:  
-
-- **Project overview and features**  
-- **Project folder structure**  
-- **Full Python code for `define_model` and example usage**  
-- **Local configuration instructions**  
-- **Interactive run instructions**  
-- **Contribution and license sections**  
-
----
-
-If you want, I can also **add a ready-to-use “requirements.txt” snippet** with the dependencies you need for this project, so it’s fully runnable locally.  
-
-Do you want me to do that next?
-```
-
 
 ---
 
