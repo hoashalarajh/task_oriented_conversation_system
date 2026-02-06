@@ -6,6 +6,8 @@ This project implements a short-term, extended **task-oriented conversation syst
 
 ---
 
+Note to practitioners: The original system was tested on the kaggle platform. In order to run this on your local machine please follow the guidelines below:
+
 ## Table of Contents
 
 - [Overview](#overview)  
