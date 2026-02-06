@@ -81,7 +81,7 @@ dialogue_system.student_interaction = text3
 dialogue_system.clarity = text4
 
 # Run the dialogue system
-dialogue_system.run_system_A()
+# dialogue_system.run_system_A()
 ```
 
 
