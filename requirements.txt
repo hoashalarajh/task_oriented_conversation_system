@@ -1,0 +1,8 @@
+numpy
+pandas
+transformers
+nltk
+google-generativeai
+requests
+ipython
+simpful
