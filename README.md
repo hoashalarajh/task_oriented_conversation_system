@@ -70,6 +70,123 @@ system = ConversationSystem()
 model, contents = system.define_model()
 ```
 
+2. Start the conversation and provide user feedback:
+``` python
+response = system.run_conversation(user_input="I found the lecture informative.")
+print(response)
+```
+---
+## Configuration
+The system requires a valid API key for model access. By default, on Kaggle, it uses `UserSecretsClient()`. For local use, replace it with an environment variable:
+
+### Update `define_model` for local use
+```python
+import os
+import json
+import base64
+import genai  # Your AI library
+
+def define_model(self):
+    # Retrieve API key from local environment variable
+    GOOGLE_API_KEY = os.environ.get("GOOGLE_API_KEY")
+    if not GOOGLE_API_KEY:
+        raise ValueError("Please set your GOOGLE_API_KEY environment variable before running.")
+
+    # Configure the client library
+    genai.configure(api_key=GOOGLE_API_KEY)
+
+    model = 'gemini-1.0-pro'
+    contents_b64 = '...'  # unchanged
+    generation_config_b64 = '...'  # unchanged
+    safety_settings_b64 = '...'  # unchanged
+    user_input_b64 = ''
+
+    contents = json.loads(base64.b64decode(contents_b64))
+    generation_config = json.loads(base64.b64decode(generation_config_b64))
+    safety_settings = json.loads(base64.b64decode(safety_settings_b64))
+    user_input = base64.b64decode(user_input_b64).decode()
+
+    generation_config['temperature'] = 1.0
+    return (model, contents)
+```
+---
+
+## Setting API Key Locally
+
+- Linux/macOS:
+```bash
+export GOOGLE_API_KEY="your_api_key_here"
+```
+- Windows Command Prompt:
+```bash
+set GOOGLE_API_KEY="your_api_key_here"
+```
+- Windows PowerShell:
+```bash
+$env:GOOGLE_API_KEY="your_api_key_here"
+```
+---
+
+## Running locally:
+
+### After configuring the API key:
+```bash
+python main.py
+```
+The system will run locally using the specified model and collect user feedback interactively.
+
+
+---
+
+## Contributing:
+
+### Contributions are welcome!
+
+- Fork the repository
+
+- Create a new branch:
+
+```bash
+git checkout -b feature/your-feature
+
+```
+
+- Commit your changes:
+```bash
+git commit -m "Add feature"
+```
+
+- Push and open a Pull Request.
+
+---
+
+## License:
+
+This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
+
+```yaml
+
+---
+
+This version of `README.md` now includes:  
+
+- **Project overview and features**  
+- **Project folder structure**  
+- **Full Python code for `define_model` and example usage**  
+- **Local configuration instructions**  
+- **Interactive run instructions**  
+- **Contribution and license sections**  
+
+---
+
+If you want, I can also **add a ready-to-use “requirements.txt” snippet** with the dependencies you need for this project, so it’s fully runnable locally.  
+
+Do you want me to do that next?
+```
+
+
+---
+
 
 
 
