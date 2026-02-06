@@ -171,9 +171,10 @@ $env:GOOGLE_API_KEY="your_api_key_here"
 ## Running locally:
 
 ### After configuring the API key:
-```bash
-python main.py
+``` python
+dialogue_system.run_system_A()
 ```
+
 The system will run locally using the specified model and collect user feedback interactively.
 
 
