@@ -1,6 +1,16 @@
 # Task-Oriented Conversation System
 
-This project implements a short-term, extended **task-oriented conversation system** designed to gather user feedback about a lecture in a user-centered manner. The system leverages hierarchical state transitions to guide the conversation effectively.  
+This project implements a short-term, extended **task-oriented conversation system** designed to gather user feedback about a lecture in a user-centered manner. The system leverages hierarchical state transitions to guide the conversation effectively. 
+
+### How this system is different and useful for you?
+A key advantage of this system is its adaptability to specific requirements. The `pre-defined_survey_questions.py`  file contains the example configurations utilized in the original implementation, which can be entirely replaced with your own custom scripts.
+
+### System Customization and Architecture
+* **High Adaptability:** The system is designed to be easily customized for specific use cases. You can replace the example scripts provided in `pre-defined_survey_questions.py` with your own custom survey configurations.
+* **State Management:** The architecture currently supports a maximum of four "superstates."
+* **Survey Structuring:** It is recommended to partition your survey questions into up to four main thematic blocks corresponding to these superstates.
+* **Scalability within Blocks:** While the number of superstates is capped at four, each block can handle an unlimited number of individual questions.
+
 
 ![HSTNs](https://github.com/user-attachments/assets/0a606e6b-8563-486f-9e5d-078dbd21d844)
 
