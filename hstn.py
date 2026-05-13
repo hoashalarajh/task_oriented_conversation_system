@@ -168,7 +168,7 @@ class hstn():
         recent_interactions = self.user_input[-6:]
         recent_interactions_as_string = " ".join(recent_interactions)
         # prompt design for getting the summary only in sentence form
-        summarize_prompt = "summarize the following sentence in sentence form:" + " " + recent_interactions_as_string
+        summarize_prompt = "summarize the following paragraph in a sentence form:" + " " + recent_interactions_as_string
         # feeding the prompt into the gemini LLM
         recent_summary =  self.generate(summarize_prompt, model, contents, stream=False) #self.summarize(recent_interactions_as_string)
         # theme responses 
