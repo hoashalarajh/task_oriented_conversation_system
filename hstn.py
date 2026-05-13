@@ -204,7 +204,7 @@ class hstn():
         usr_res_str = " ".join(user_responses)
         model, contents = self.define_model()
         # prompt design for getting the summary only in sentence form
-        reflc_prompt = "summarize the following sentence in sentence form as a final refelction of the whole interaction:" + " " + usr_res_str
+        reflc_prompt = "summarize the following paragraph in sentence form as a final refelction of the whole interaction:" + " " + usr_res_str
         # feeding the prompt into the gemini LLM
         reflc_res =  self.generate(reflc_prompt, model, contents, stream=False) #self.summarize(recent_interactions_as_string)
         
